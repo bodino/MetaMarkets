@@ -12,15 +12,18 @@ import {
 import Onboard from 'bnc-onboard'
 import Web3 from 'web3'
 import { ethers } from 'ethers'
+import Menu from './pages/Menu'
+
+import { connectedState } from './state'
+
 
 var Eth = require('web3-eth')
 let web3
 const usdcAddress = '0x2791bca1f2de4661ed88a30c99a7a9449aa84174'
 var autoSelectWallet = 'metamask'
 
-
-let provider:any
-let signer:any 
+let provider: any
+let signer: any
 
 const wallets = [
   { walletName: 'coinbase', preferred: true },
@@ -35,7 +38,33 @@ const wallets = [
   },
 ]
 
+ 
+
 function App() {
+  const[walletConnected, setWalletConnected] = useState<any>(0)
+  // const [connected, setConnected] = useRecoilState<any>(connectedState)
+
+
+  const onboard = Onboard({
+    dappId: '3bbe9d54-ac92-483d-92b0-dbaebe33768e', // [String] The API key created by step one above
+    networkId: 137, // [Integer] The Ethereum network ID your Dapp uses.
+    darkMode: true,
+    subscriptions: {
+      wallet: (wallet: any) => {
+        provider = new ethers.providers.Web3Provider(wallet.provider)
+        console.log(provider)
+        signer = provider.getSigner()
+        console.log(`connected to ${wallet.name}`)
+        window.localStorage.setItem('selectedWallet', wallet.name)
+      },
+      
+    },
+    walletSelect: {
+      wallets: wallets,
+    },
+  })
+
+  
 
   useEffect(() => {
     async function loadWallet() {
@@ -49,35 +78,13 @@ function App() {
     loadWallet()
   }, [])
 
-  const [usdcBalance, setusdcBalance] = useState(0)
-
-  const onboard = Onboard({
-    dappId: '3bbe9d54-ac92-483d-92b0-dbaebe33768e', // [String] The API key created by step one above
-    networkId: 137, // [Integer] The Ethereum network ID your Dapp uses.
-    subscriptions: {
-      wallet: (wallet) => {
-        provider = new ethers.providers.Web3Provider(wallet.provider)
-        console.log(provider)
-        signer = provider.getSigner()
-        console.log(`connected to ${wallet.name}`)
-        // @ts-ignore
-        window.localStorage.setItem('selectedWallet', wallet.name)
-      },
-    },
-    walletSelect: {
-      wallets: wallets,
-    },
-  })
-
-  async function login() {
-    await onboard.walletSelect(autoSelectWallet)
-    await onboard.walletCheck()
-  }
+ 
 
   async function getBlockState() {
-    
-    const getBlockNumber:number = await provider.getBlockNumber()
-    console.log(getBlockNumber)
+    try { 
+      //setWalletConnected(true);
+
+      }catch (error) {}
 
     // @ts-ignore
     //const daiContract = new ethers.Contract(usdcAddress, usdcAbi, provider);
@@ -85,11 +92,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="connectToWalletModule">
-        <button onClick={login}>Connect To Wallet</button>
-        <button onClick={getBlockState}>Connect To Wallet</button>
-      </div>
-      <div className="profile"></div>
+      <Menu 
+     
+      wallet ={onboard}
+      walletConnected = {walletConnected}
+      setWalletConnected = {setWalletConnected}
+      />
+     
     </div>
   )
 }

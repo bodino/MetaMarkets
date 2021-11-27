@@ -1,5 +1,24 @@
+button, input[type="submit"], input[type="reset"] {
+
+
+	border: none;
+
+
+	
+}
+
+button:hover {
+  background-color: rgb(101, 124, 253) ;
+}
+
+
 .App {
   text-align: center;
+  
+}
+body {
+  background: rgb(28, 28, 40);
+  overscroll-behavior-y: none;
 }
 
 .App-logo {
@@ -13,9 +32,10 @@
   }
 }
 
+
+
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +55,132 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+/* Header */
+.Header{
+  display: flex;
+  height: 48px;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  align-content:center;
+  align-items: center;
+  
+  border-bottom: 1px solid rgb(45, 45, 61);
+
+}
+
+/* Within Header */
+.connectToWalletModule{
+  justify-self: flex-end;
+  margin-right: 20px;
+  
+
+
+}
+.buttonColor{
+  background-color: rgb(89, 115, 254);
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  
+
+}
+
+.AppName{
+
+  justify-self: flex-start;
+  margin-left: 20px;
+  color: rgb(111, 110, 132);
+  display: flex;
+  height: 48px;
+  flex-direction: row;
+  
+  justify-content: space-between;
+  align-content:center;
+  align-items: center;
+  
+}
+
+
+.ImageLogo {
+  width: 30px;
+}
+
+.MenuOptions {
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: all .15s ease-in-out!important;
+}
+.MenuOptions:hover {
+  color:rgb(247, 247, 247);
+  background-color: rgb(18, 18, 26);
+  border-radius: 5px;
+  
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+}
+
+.FlexBox{
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-content:center;
+  align-items: center;
+}
+
+.Account{
+  justify-self: flex-start;
+  color: rgb(111, 110, 132);
+  display: flex;
+  
+  width: 370px;
+  flex-direction: column;
+  border-right: 1px solid rgb(45, 45, 61);
+  justify-content: left;
+  align-self: stretch;
+
+  align-content:center;
+  align-items: center;
+}
+
+.MarketsPage{
+  background-image: url("bggrid.svg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-size: 1450px;
+  background-origin: padding-box;
+  background-position: center;
+  min-height: calc(100vh - 49px);
+
+}
+
+.UserInfo{
+  color: rgb(111, 110, 132);
+  background-image: url("chart-background.png");
+  background-color: rgb(23, 23, 34);
+  border-radius: 5px;
+  min-width: 250px;
+  border: 1px solid rgb(45, 45, 61);
+  min-height: 250px;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content:left;
+  align-items: left;
+  
+}
+
+.balances{
+  font-size: calc(25px);
+  color: rgb(247, 247, 247);
 }
