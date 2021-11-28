@@ -13,7 +13,7 @@ export function MapData({items ,isLoading}:any) {
         <div className="FlexBoxMarkets">
         {items.map((item:any) =>(
 
-            <Link to="/Markets">
+            <Link to={"/Markets/"+item.marketMakerAddress} >
                 <RenderData key={item.char_id} item={item}></RenderData>
             </Link>
 

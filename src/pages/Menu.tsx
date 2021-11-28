@@ -41,6 +41,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
   }
 
   return (
+    <Router>
     <div className="Menu1">
       <Header
         login={logintoWallet}
@@ -53,19 +54,20 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
       <Account 
       />
       <div className="MarketsPage">
-      <Router>
+      
         <Routes>
           <Route path="/" element={<Markets/> }>
           </Route>
           <Route path="/Market" element={<IndividualMarket/>}> 
           </Route>
         </Routes>
-       </Router>
+       
 
       </div>
     </div>
      
     </div>
+    </Router>
   )
 }
 
