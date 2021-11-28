@@ -14,6 +14,8 @@ import { ethers } from 'ethers'
 import Header from '../components/Header'
 import Account from '../components/Account'
 import { connectedState } from '../state'
+import GetData from '../components/marketIcons/getData'
+import Markets from '../components/Markets'
 
 var Eth = require('web3-eth')
 let web3
@@ -30,7 +32,7 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
   }
 
   return (
-    <div className="Menu">
+    <div className="Menu1">
       <Header
         login={logintoWallet}
         wallet={wallet}
@@ -42,7 +44,8 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
       <Account 
       />
       <div className="MarketsPage">
-        hello world
+       <Markets/> 
+
       </div>
     </div>
      

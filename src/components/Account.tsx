@@ -38,7 +38,7 @@ export function Account() {
         </span>
 
       <div className= "UserInfo">
-            <p>Active Markets</p>
+            <p>Your Markets</p>
 
       </div>
 
