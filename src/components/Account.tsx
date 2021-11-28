@@ -13,13 +13,20 @@ import Onboard from 'bnc-onboard'
 import Web3 from 'web3'
 import { ethers } from 'ethers'
 
+import YourMiniMarkets from './minimarket/YourMiniMarkets'
+import { marketState } from '../state'
+import { isItLoading } from '../state'
 var Eth = require('web3-eth')
 let web3
 const usdcAddress = '0x2791bca1f2de4661ed88a30c99a7a9449aa84174'
 var autoSelectWallet = 'metamask'
 
 
+
 export function Account() {
+
+    const [marketArray, setMarketArray] = useRecoilState<any>(marketState)
+    const [isLoading, setIsLoading] = useRecoilState<any>(isItLoading)
 
 
   return (
@@ -37,8 +44,12 @@ export function Account() {
             <br></br>
         </span>
 
-      <div className= "UserInfo">
+      <div className= "YourMarkets">
             <p>Your Markets</p>
+            <YourMiniMarkets
+            login={marketArray}
+            isLoading={isLoading}
+            />
 
       </div>
 

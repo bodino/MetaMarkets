@@ -1,7 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import RenderData from './render'
-
+import {
+    Link
+  } from "react-router-dom";
 
 
 export function MapData({items ,isLoading}:any) {
@@ -11,9 +13,9 @@ export function MapData({items ,isLoading}:any) {
         <div className="FlexBoxMarkets">
         {items.map((item:any) =>(
 
-
-            <RenderData key={item.char_id} item={item}></RenderData>
-        
+            <Link to="/Markets">
+                <RenderData key={item.char_id} item={item}></RenderData>
+            </Link>
 
         ))}
         </div>

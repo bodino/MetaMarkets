@@ -1,4 +1,10 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
 import logo from './logo.svg'
 import { useState, useEffect } from 'react'
 import '../App.css'
@@ -16,6 +22,9 @@ import Account from '../components/Account'
 import { connectedState } from '../state'
 import GetData from '../components/marketIcons/getData'
 import Markets from '../components/Markets'
+import IndividualMarket from '../components/IndividualMarket'
+
+
 
 var Eth = require('web3-eth')
 let web3
@@ -44,7 +53,14 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
       <Account 
       />
       <div className="MarketsPage">
-       <Markets/> 
+      <Router>
+        <Routes>
+          <Route path="/" element={<Markets/> }>
+          </Route>
+          <Route path="/Market" element={<IndividualMarket/>}> 
+          </Route>
+        </Routes>
+       </Router>
 
       </div>
     </div>

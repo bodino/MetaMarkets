@@ -7,13 +7,7 @@ button, input[type="submit"], input[type="reset"] {
 	
 }
 
-img {
-  width: 65px;
-  height: 65px;
-  object-fit: cover;
-  border-radius: 20%;
-  padding:15px
-}
+
 
 button:hover {
   background-color: rgb(101, 124, 253) ;
@@ -177,6 +171,22 @@ body {
   overflow-y: scroll;
 }
 
+.MarketImg {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 20%;
+  padding:15px
+}
+
+.UserMarketImg {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 15%;
+  padding: 5px;
+}
+
 .UserInfo{
   color: rgb(111, 110, 132);
   background-image: url("chart-background.png");
@@ -195,6 +205,24 @@ body {
   align-items: left;
   
 }
+.YourMarkets{
+  color: rgb(111, 110, 132);
+  background-image: url("chart-background.png");
+  background-color: rgb(23, 23, 34);
+
+  border-radius: 5px;
+  width: 300px;
+  border: 1px solid rgb(45, 45, 61);
+  height: calc(100vh - 400px);
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content:left;
+  align-items: left;
+  overflow-y: scroll;
+}
 
 .MarketInfo{
   color:rgb(219, 219, 219);
@@ -203,7 +231,7 @@ body {
   border-radius: 5px;
   width: 300px;
   border: 1px solid rgb(45, 45, 61);
-  min-height: 180px;
+  min-height: 200px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
@@ -213,11 +241,40 @@ body {
   justify-content: left;
 }
 
+.YourMarketInfo{
+  color: rgb(111, 110, 132);
+  background-image: url("chart-background.png");
+  background-color: rgb(23, 23, 34);
+  border-radius: 5px;
+  width: 450px;
+  border: 1px solid rgb(45, 45, 61);
+  min-height: 50px;
+  text-align: left;
+
+  font-size: 12px;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.MarketInfo:hover{
+  background-color: rgb(41, 41, 58);
+  cursor: pointer;
+}
+
+.MarketInfoFlexRow{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .TopMarket{
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-self: flex-start;
+  
 }
 
 .BottomMarket{
@@ -225,6 +282,17 @@ body {
   flex-direction: row;
   justify-content: left;
   align-self: flex-start;
+  margin:	0% 0% 0% 0%;
+  padding: 0;
+ 
+  color: rgb(111, 110, 132);
+}
+.BottomMarketFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  max-width: 120px;
+  margin-right: 15px;
   margin-left: 15px;
   color: rgb(111, 110, 132);
 }
@@ -246,10 +314,10 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding:18px;
+  
 
 }
 
 .MarketText{
   text-align: left;
-  margin-right: 10px;
 }
