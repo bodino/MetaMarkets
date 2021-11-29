@@ -171,6 +171,26 @@ body {
   overflow-y: scroll;
 }
 
+.IndividualMarketPage{
+  background-image: url("bggrid.svg");
+  background-color: rgb(23, 23, 34);
+  background-size: contain, cover;
+ 
+ 
+  
+  display: flex;
+  
+  flex-direction: column;
+  justify-content: left;
+  align-content:left;
+  flex-wrap: wrap;
+  align-items: left;
+  width: calc(100vw -  370px);
+  height: calc(100vh - 49px);
+  overflow-y: scroll;
+  padding: 18px;
+}
+
 .MarketImg {
   width: 65px;
   height: 65px;
@@ -314,9 +334,10 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   padding:18px;
-  
-
 }
+
+
+
 
 .MarketText{
   text-align: left;

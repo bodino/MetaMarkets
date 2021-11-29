@@ -43,14 +43,7 @@ export function GetData() {
 
   return( 
     <div>
-        <MapData
-        items={marketArray}
-        isLoading={isLoading}
-
-        />
     </div>
-  
-  
   );
 
 }

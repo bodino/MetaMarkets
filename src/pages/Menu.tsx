@@ -19,10 +19,10 @@ import Web3 from 'web3'
 import { ethers } from 'ethers'
 import Header from '../components/Header'
 import Account from '../components/Account'
-import { connectedState } from '../state'
-import GetData from '../components/marketIcons/getData'
+import { connectedState, marketState } from '../state'
 import Markets from '../components/Markets'
 import IndividualMarket from '../components/IndividualMarket'
+import GetData from '../components/marketIcons/getData'
 
 
 
@@ -33,6 +33,7 @@ var autoSelectWallet = 'metamask'
 
 export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
   const [connected, setConnected] = useRecoilState<any>(connectedState)
+  const [marketArray, setMarketArray] = useRecoilState<any>(marketState)
 
   async function logintoWallet() {
     await wallet.walletSelect()
@@ -58,14 +59,14 @@ export function Menu({ wallet, walletConnected, setWalletConnected }: any) {
         <Routes>
           <Route path="/" element={<Markets/> }>
           </Route>
-          <Route path="/Market" element={<IndividualMarket/>}> 
+          <Route path="/Market/:id" element={<IndividualMarket items={marketArray}/>}> 
           </Route>
         </Routes>
        
 
       </div>
     </div>
-     
+     <GetData/>
     </div>
     </Router>
   )
