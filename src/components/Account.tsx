@@ -34,7 +34,7 @@ export function Account() {
         <span>
             <br></br>
         </span>
-      <div className= "UserInfo">
+      <div className= "UserInfo" style={{justifyContent: 'center'}}>
             <p>USDC Value</p>
             <p className="balances">$0.00</p>
             <p>Portfolio Value</p>

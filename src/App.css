@@ -183,12 +183,12 @@ body {
   flex-direction: column;
   justify-content: left;
   align-content:left;
-  flex-wrap: wrap;
+
   align-items: left;
   width: calc(100vw -  370px);
   height: calc(100vh - 49px);
   overflow-y: scroll;
-  padding: 18px;
+
 }
 
 .MarketImg {
@@ -216,6 +216,25 @@ body {
   width: 300px;
   border: 1px solid rgb(45, 45, 61);
   min-height: 300px;
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content:left;
+  align-items: left;
+  
+}
+
+.BuyMenuOutside{
+  color: rgb(111, 110, 132);
+  background-image: url("chart-background.png");
+  background-color: rgb(23, 23, 34);
+
+  border-radius: 5px;
+  width: 300px;
+  border: 1px solid rgb(45, 45, 61);
+  height: 364px;
   
 
   display: flex;
@@ -341,4 +360,196 @@ body {
 
 .MarketText{
   text-align: left;
+  display: flex;
+ 
+  flex-direction: row;
+  color: aliceblue;
+  
+  justify-content: flex-start;
+  align-content:center;
+  align-items: center;
+ 
+}
+
+.MarketHeader{
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  color: aliceblue;
+  
+  justify-content: flex-start;
+  align-content:center;
+  align-items: center;
+  
+  overflow-x: scroll;
+  border-bottom: 1px solid rgb(45, 45, 61);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  padding-left:20px;
+}
+
+.MarketHeaderInfo{
+  display: flex;
+  height: 60px;
+  flex-direction: row;
+  color: rgb(111, 110, 132);
+  background-color: rgb(28, 28, 40);
+  
+  justify-content: flex-start;
+  align-content:center;
+  align-items: center;
+  
+  overflow-x: scroll;
+  border-bottom: 1px solid rgb(45, 45, 61);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;
+  padding-left:20px;
+}
+
+.MarketHeaderText{
+  font-size: 14px;
+  padding-right: 20px;
+  text-align: left;
+  display: flex;
+ 
+  flex-direction: column;
+ 
+  
+  justify-content: flex-start;
+  align-content:center;
+  align-items: center;
+}
+.flexContainsBuyAndGraph{
+  text-align: left;
+  display: flex;
+ 
+  flex-direction: row;
+  color: aliceblue;
+  
+  justify-content: flex-start;
+  align-content:center;
+  align-items: center;
+}
+
+.BuyMenu{
+  background-color: rgb(28, 28, 40);
+  justify-self: flex-start;
+  color: rgb(111, 110, 132);
+  display: flex;
+  
+  min-width: 370px;
+  
+  flex-direction: column;
+  border-right: 1px solid rgb(45, 45, 61);
+  justify-content: center;
+  align-self: stretch;
+
+
+  align-content:center;
+  align-items: center;
+}
+
+.Chart{
+  align-self: stretch;
+  justify-content: stretch;
+  height: 400px;
+  flex-grow: 1;
+
+}
+
+.MarketFooter{
+  align-self: stretch;
+  justify-content: stretch;
+  height: 500px;
+  flex-grow: 1;
+  background-color: rgb(28, 28, 40);
+  border-top: 1px solid rgb(45, 45, 61);
+
+}
+
+.BuySellButton{    
+  font-weight: 500;
+  -webkit-font-feature-settings: "zero" 0;
+  font-feature-settings: "zero" 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: flex;
+  position: relative;
+  height: 40px;
+  width: 80%;
+  margin-top: 18px;
+  align-self: center;
+  cursor: pointer;
+
+}
+
+.ActualButton{
+  font-size: 14px;
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #6f6e84;
+    transition: border 0.2s ease-in-out;
+    border: 2px solid #171722;
+    background-color: rgb(28, 28, 40);
+    border-radius: 5px;
+    flex-direction: column;
+}
+
+.Amount{
+  text-align: center;
+  padding: 18px;
+  font-size: 12px;
+  color: antiquewhite;
+}
+
+.InputBoxFlex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Relative Mono;
+  font-weight: 400;
+  -webkit-font-feature-settings: "zero" 1;
+  font-feature-settings: "zero" 1;
+
+  padding: 0;
+  min-height: 40px;
+  justify-content: center;
+  color: white;
+  border: 2px solid #171722;
+}
+
+.InputBox{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Relative Mono;
+  font-weight: 400;
+  -webkit-font-feature-settings: "zero" 1;
+  font-feature-settings: "zero" 1;
+  background-color: #232334;
+  padding-left: 5px;
+  padding-right: 5px;
+  min-height: 40px;
+  justify-content: center;
+  color: white;
+  border: 2px solid #171722;
+  border-radius: 5px;
+  font-family: Relative Mono;
+  font-size: 16px;
+
+  font-weight: 400;
+    -webkit-font-feature-settings: "zero" 1;
+    font-feature-settings: "zero" 1;
+}
+
+.ConfirmBox{
+align-self: center;
+display: flex;
+flex-direction: column;
+justify-content: left;  
+text-align: left;
 }
