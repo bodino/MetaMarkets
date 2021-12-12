@@ -458,6 +458,16 @@ body {
 }
 
 .MarketFooter{
+  background-color: rgb(28, 28, 40);
+  justify-self: flex-start;
+  color: rgb(111, 110, 132);
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-self: stretch;
+  align-content: center;
+  align-items: left;
   align-self: stretch;
   justify-content: stretch;
   height: 500px;
@@ -533,7 +543,7 @@ body {
   background-color: #232334;
   padding-left: 5px;
   padding-right: 5px;
-  min-height: 40px;
+  min-height: 35px;
   justify-content: center;
   color: white;
   border: 2px solid #171722;
@@ -552,4 +562,69 @@ display: flex;
 flex-direction: column;
 justify-content: left;  
 text-align: left;
+width: 235px;
+
+
+}
+.ConfirmBoxTextFlex{
+align-self: center;
+display: flex;
+flex-direction: column;
+justify-content: left;  
+text-align: left;
+margin-top: 8px;
+
+}
+
+.ConfirmBoxText{
+  font-size: 12px;
+  color: antiquewhite;
+  
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.ConfirmBoxButton{
+  background-color: rgb(89, 115, 254);
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  font-size: 13px;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-self: center;
+  margin-top: 10px;
+}
+
+.ConfirmBoxFlexRow{ 
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  align-content:center;
+  align-items: center;
+
+}
+
+.ConfirmBoxplaceHolder{
+  padding-right: 5px;
+}
+
+.PositionMenu{
+  color: rgb(111, 110, 132);
+  background-image: url("chart-background.png");
+  background-color: rgb(23, 23, 34);
+
+  border-radius: 5px;
+  align-self: stretch;
+  border: 1px solid rgb(45, 45, 61);
+  height: 364px;
+  margin-inline: 35px;
+
+  
+
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-content:left;
+  align-items: left;
 }
